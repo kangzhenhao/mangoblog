@@ -4,13 +4,14 @@ import Home from '../views/Home.vue'
 import Login from '../components/Login/Login.vue'
 import Blog from '../components/Blog/Blog.vue'
 import About from '../components/About/About.vue'
+import Write from '../components/Write/Write.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: '/login'
+    redirect: '/home'
   },
   {
     path: '/login',
@@ -33,6 +34,10 @@ const routes = [
       {
         path: '/about',
         component: About
+      },
+      {
+        path: '/home/write',
+        component: Write
       }
     ]
   }

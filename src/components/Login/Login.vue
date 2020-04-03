@@ -46,11 +46,6 @@ export default {
       this.loginForm = getuser
     }
   },
-  mounted () {
-    if (!this.loginForm.remember) {
-      this.$refs.usernameInputRef.focus()
-    }
-  },
   methods: {
     login () {
       this.$refs.loginFormRef.validate(valid => {
@@ -67,6 +62,12 @@ export default {
       }
     },
     resetForm () {
+      this.loginForm = {
+        username: '',
+        password: '',
+        remember: false
+      }
+      window.localStorage.removeItem('mangoUser')
       this.$refs.loginFormRef.resetFields()
     }
   }
@@ -83,13 +84,13 @@ export default {
   background: url("./image/login-bg.jpg");
   background-size:100% 100%;
   .el-card {
-    width: 350px;
-    padding-right: 23px;
+    width: 380px;
+    padding-right: 30px;
     h2 {
-      margin-left: 23px;
-      margin-bottom: 35px;
+      margin: 20px 0 20px 23px;
       text-align: center;
       font-family: HoangYen11;
+      font-size: 2rem;
       user-select: none;
     }
     .el-form .el-form-item:nth-of-type(3) {

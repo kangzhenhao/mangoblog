@@ -21,7 +21,8 @@ import {
   Backtop,
   Dropdown,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Notification
 } from 'element-ui'
 
 Vue.use(Button)
@@ -46,3 +47,5 @@ Vue.use(Backtop)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
+
+Vue.prototype.$notify = Notification

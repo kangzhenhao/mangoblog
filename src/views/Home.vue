@@ -11,7 +11,7 @@
             <el-menu-item index="/about">About</el-menu-item>
           </el-menu>
           <div class="logout hidden-xs-only">
-            <el-button type="primary" size="small" icon="el-icon-edit">写博客</el-button>
+            <el-button type="primary" size="small" icon="el-icon-edit" @click="toWrite">写博客</el-button>
           </div>
           <el-dropdown class="hidden-sm-and-up" size="mini" trigger="click">
             <el-button type="primary">
@@ -34,6 +34,11 @@
 
 <script>
 export default {
+  methods: {
+    toWrite () {
+      this.$router.push('/home/write')
+    }
+  }
 }
 </script>
 

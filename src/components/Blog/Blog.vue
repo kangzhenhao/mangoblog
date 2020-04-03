@@ -83,10 +83,12 @@ export default {
   margin: 20px 0;
   .blog-list li {
     margin-bottom: 15px;
+    padding-right: 5%;
     height: 80px;
     cursor: pointer;
     h4 {
       margin-top: 15px;
+      font-weight: bolder;
     }
     p {
       margin: 10px 0;
@@ -105,7 +107,7 @@ export default {
     margin-bottom: 10px;
   }
   .el-pagination {
-    margin-top: 15px;
+    margin: 15px 0 0 0;
   }
 }
 
