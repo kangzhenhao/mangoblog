@@ -11,7 +11,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/index'
   },
   {
     path: '/login',
@@ -19,16 +19,16 @@ const routes = [
     component: Login
   },
   {
-    path: '/home',
-    name: 'Home',
+    path: '/index',
+    name: 'index',
     component: Home,
     children: [
       {
-        path: '/home',
-        redirect: '/home/blog'
+        path: '/index',
+        redirect: '/home'
       },
       {
-        path: '/home/blog',
+        path: '/home',
         component: Blog
       },
       {
@@ -36,7 +36,7 @@ const routes = [
         component: About
       },
       {
-        path: '/home/write',
+        path: '/write',
         component: Write
       }
     ]
